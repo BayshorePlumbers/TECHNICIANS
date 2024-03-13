@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.calculator {
+    padding: 20px;
+    border: 5px solid #3bdde8;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form div {
+    width: calc(50% - 10px);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="checkbox"],
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(193, 100%, 50%);
+    color: hsl(0, 3%, 6%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: hsl(75, 100%, 35%);
+}
+
+.output-group {
+    margin-top: 20px;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the output */
+}
+
+#finalPrice {
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+h2 {
+    text-align: center;
+    margin-top: 20px;
+}

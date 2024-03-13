@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WATER HEATER BIDDING CALCULATOR - BAYSHORE PLUMBERS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        img {
+            max-width:100%;
+            max-height: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 300px; /* Adjust logo width */
+            max-height: auto; /* Automatically adjust logo height */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>WATER HEATER BIDDING CALCULATOR - BAYSHORE PLUMBERS</h1>
+<div class = "logo-container">
+    <img src="BP.jpg" alt="BP" class="logo">
+</div>
+<div class="container">
+    <div class="calculator">
+        <form id="biddingForm"> <!-- Added id to the form -->
+            <div>
+                <label for="et">ESTIMATED TIME:</label>
+                <input type="number" id="et" name="et" placeholder="Enter Estimated Time">
+                <br><br>
+
+                <label for="material">MATERIAL EXPENSES:</label>
+                <input type="number" id="material" name="material" placeholder="Enter Estimated MATERIAL EXPENSES">
+                <br><br>
+
+                <label for="am">ADDITIONAL MANPOWER:</label>
+                <input type="number" id="am" name="am" placeholder="Enter Additional Manpower">
+                <br><br>
+
+                <label for="others">OTHER EXPENSES:</label>
+                <input type="number" id="others" name="others" placeholder="Enter OTHER Expenses (If Any)">
+                <br><br>
+
+                <label for="discount">DISCOUNTS:</label>
+                <select id="discount" name="discount">
+                    <option value="5%">5 Percent</option>
+                    <option value="10%">10 Percent</option>
+                    <option value="no discount">NO DISCOUNT</option>
+                </select>
+                <br><br>
+
+                <label for="permits">PERMITS REQUIRED:</label>
+                <input type="checkbox" id="permits" name="permits">
+                <br><br>
+                <div class="output-group"> <!-- Changed id to class -->
+                    Final Bidding Price: $<span id="finalPrice">0.00</span>
+                </div>
+                <button type="button" id="calculateBtn">Calculate Final Bidding Price</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="heaterscript.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNICIAN POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+    <style>
+        img {
+            max-width:100%;
+            max-height: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 300px; /* Adjust logo width */
+            max-height: auto; /* Automatically adjust logo height */
+            display: block;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .calculator {
+            padding: 20px;
+            border: 5px solid #3bdde8;
+            border-radius: 10px;
+            width: 90%; /* Adjust container width */
+            margin: 10px;
+        }
+
+        form div {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        h5 {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="checkbox"],
+        select {
+            width: calc(50% - 12px); /* Adjust input field width */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        textarea {
+            width: calc(100% - 22px); /* Adjust textarea width */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            resize: vertical; /* Allow vertical resizing */
+        }
+
+        button {
+            width: calc(50% - 12px); /* Adjust button width */
+            padding: 10px;
+            background-color: hsl(193, 100%, 50%);
+            color: hsl(0, 3%, 6%);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: hsl(75, 100%, 35%);
+        }
+
+        #output-group {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #finalPrice {
+            font-weight: bold;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-group input {
+            width: 100%; /* Adjust input field width */
+        }
+
+        .column-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .column {
+            width: 48%;
+        }
+
+        @media print {
+            .logo {
+                max-width: 80px; /* Adjust logo width for print */
+                max-height: auto; /* Automatically adjust logo height for print */
+            }
+        h1 {
+                font-size: 12px; /* Adjust title font size for print */
+            }
+        body {
+                font-size: 10pt; /* Adjust font size for print */
+            }
+        .container {
+                width: 100%; /* Ensure container width for print */
+                padding: 10px; /* Add padding for print */
+            }
+        .row {
+                display: flex; /* Display rows as block for print */
+                page-break-inside: avoid; /* Avoid page breaks inside rows */
+            }  
+        }
+    </style>
+</head>
+<body>
+    <h1>TECHNICIAN POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</h1>
+    <div class="logo-container">
+        <img src="BP.jpg" alt="BP" class="logo">
+    </div>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="row">
+                    <div class="column">
+                        <label for="in">INVOICE NUMBER:</label>
+                        <input type="text" id="in" name="in" placeholder="Enter the invoice number here">
+                        <br><br>
+                        <label for="tp">TOTAL PRICE:</label>
+                        <input type="number" id="tp" name="tp" placeholder="Enter the final selling price of the job">
+                        <br><br>
+                        <label for="pd">PROJECT HOURS:</label>
+                        <input type="number" id="pd" name="pd" placeholder="Enter Final Project Duration">
+                    </div>
+                    <div class="column">
+                        <label for="material">MATERIAL EXPENSES:</label>
+                        <input type="number" id="material" name="material" placeholder="Enter Estimated MATERIAL EXPENSES">
+                        <br><br>
+                        <label for="ja">JOB ADDRESS:</label>
+                        <input type="text" id="ja" name="ja" placeholder="Enter job address here">
+                        <br><br>
+                        <label for="pbtc">PRICE BOOK JOB CODE:</label>
+                        <input type="text" id="pbtc" name="pbtc" placeholder="Enter PRICE BOOK JOB CODE">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h5>LABOR DETAILS</h5>
+                    <div class="column">
+                        <label for="day1">DAY 1:</label>
+                        <input type="number" id="day1" name="day1">
+                        <br><br>
+                        <label for="day2">DAY 2:</label>
+                        <input type="number" id="day2" name="day2">
+                        <br><br>
+                        <label for="day3">DAY 3:</label>
+                        <input type="number" id="day3" name="day3">
+                        <br><br>
+                        <label for="day4">DAY 4:</label>
+                        <input type="number" id="day4" name="day4">
+                    </div>
+                    <div class="column">
+                        <label for="day5">DAY 5:</label>
+                        <input type="number" id="day5" name="day5">
+                        <br><br>
+                        <label for="ah">Additional Hours:</label>
+                        <input type="number" id="ah" name="ah">
+                        <br><br>
+                        <label for="toh">Total Overtime Hours:</label>
+                        <input type="number" id="toh" name="toh">
+                        <br><br>
+                        <label for="totalHours">Total Hours:</label>
+                        <input type="number" id="totalHours" name="totalHours" readonly>
+                    </div>
+                </div>
+
+                <div class="row notes-section">
+                    <h5>NOTES:</h5>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Enter Notes Here"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <h5>PAY RATES</h5>
+                            <div class="column">
+                                <label for="t1">TIER 1 (21%):</label>
+                                <input type="text" id="t1" name="t1" readonly>
+                                <br><br>
+                                <label for="t2">TIER 2 (15%):</label>
+                                <input type="text" id="t2" name="t2" readonly>
+                                <br><br>
+                                <label for="t3">TIER 3 (10%):</label>
+                                <input type="text" id="t3" name="t3" readonly>
+                                <br><br>
+                                <label for="t4">TIER 4 (JOB BUST):</label>
+                                <input type="text" id="t4" name="t4" readonly>
+                            </div>
+                    </div>
+                    <div class="column">
+                        <h5>FOR OFFICE USE ONLY</h5>
+                        <label for="sw">SW21:</label>
+                        <input type="text" id="sw" name="sw" readonly>
+                        <br><br>
+                        <label for="wh">WH32:</label>
+                        <input type="text" id="wh" name="wh" readonly>
+                        <br><br>
+                        <label for="rd">RD15/UL15:</label>
+                        <input type="text" id="rd" name="rd" readonly>
+                        <br><br>
+                        <label for="rp">RP21:</label>
+                        <input type="text" id="rp" name="rp" readonly>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button type="button" id="calculateBtn">Calculate Technician Potential Commission</button>
+                    <div id="output-group">
+                        <p>Technician Commission (Total): <span id="finalPrice">0.00</span></p>
+                    </div>
+                    <button id="printButton">Print</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="techcomscript.js"></script>
+    <script>
+        document.getElementById("printButton").addEventListener("click", function() {
+            window.print();
+        });
+    </script>
+</body>
+</html>

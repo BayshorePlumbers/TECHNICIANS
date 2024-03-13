@@ -1,0 +1,31 @@
+@media print {
+    body {
+        width: 210mm; /* A4 width */
+        height: 297mm; /* A4 height */
+        color: black; /* Text color */
+        background-color: none; /* Background color */
+    }
+
+    @page {
+        size: A4; /* Set page size to A4 */
+        margin: 0; /* Remove default margin */
+        /* Enable duplex printing */
+        duplex: duplex; /* Enable duplex mode */
+        /* Set the binding margin (where the holes for binding are punched) */
+        binding: 1cm; /* Adjust as needed */
+    }
+
+    .container {
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    button#printButton {
+        display: none;
+    }
+
+    .notes-section {
+        page-break-after: always;
+    }
+}
