@@ -1,0 +1,163 @@
+/* Adjust layout for printing */
+h1 {
+    text-align: center;
+    margin: 5px 0; /* Reduce top margin */
+    font-size: 14px;
+}
+
+.logo-container {
+    display: block;
+    text-align: center;
+    margin-bottom: 5px; /* Reduce margin for better spacing */
+}
+
+.logo {
+    max-width: 100px; /* Reduce logo size further */
+}
+
+.container {
+    width: 95%; /* Adjust container width for better fit on A4 */
+    margin: 0 auto;
+    position: relative;
+}
+
+.calculator {
+    padding: 5px; /* Reduce padding */
+    border: 1px solid #000; /* Reduce border size */
+    border-radius: 5px; /* Reduce border radius */
+    margin: 5px auto; /* Reduce margin */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px; /* Reduce bottom margin */
+    flex-wrap: wrap;
+}
+
+.column {
+    width: 48%; /* Reduce width slightly */
+}
+
+.label-column {
+    width: 30%; /* Adjust label column width */
+}
+
+.input-column {
+    width: 70%; /* Adjust input column width */
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Adjust font color for better printing */
+body, label, input, select, textarea {
+    color: #000 !important; /* Black text */
+    font-size: 10px; /* Reduce font size */
+}
+
+/* Additional adjustments for printing */
+textarea {
+    height: auto; /* Allow textarea to expand to fit content */
+    min-height: 70px; /* Reduce minimum height */
+}
+
+.column-container {
+    flex-direction: column; /* Adjust column layout for better printing */
+}
+
+/* Adjust input width for better fit on A4 */
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 10px); /* Reduce width slightly */
+}
+
+/* Ensure inputs span full width */
+.form-control {
+    width: 100% !important;
+}
+
+/* Fix position of output group at the bottom center */
+.output-group {
+    position: absolute;
+    bottom: 10px; /* Reduce bottom position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%; /* Adjust width if necessary */
+    text-align: center;
+    margin-top: 10px; /* Reduce top margin */
+}
+
+/* Move output group down to prevent overlapping */
+.row:last-child {
+    margin-bottom: 10px; /* Reduce margin as needed */
+}
+
+/* Scale down the webpage to 90% for printing */
+@media print {
+    body {
+        zoom: 99%;
+    }
+
+    /* Hide calculate and print buttons on print */
+    #calculateBtn, #printButton {
+        display: none;
+    }
+}
+
+/* Provide appropriate spacing between elements */
+.labor-details-row {
+    margin-bottom: 5px; /* Reduce margin */
+}
+
+.notes-section {
+    margin-bottom: 5px; /* Reduce margin */
+}
+
+/* Show "Pay Rates" and "For Office Use Only" and their subheadings in one row */
+.pay-rates-section, .office-use-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pay-rates-section h5, .office-use-section h5 {
+    flex: 1 1 100%;
+    margin-bottom: 5px; /* Reduce margin */
+}
+
+.pay-rates-section .label-column, .office-use-section .label-column {
+    flex: 1 1 45%;
+}
+.pay-rates-section .input-column, .office-use-section .input-column {
+    flex:1 1 45%;
+    margin-bottom: 5px;
+}
+
+/* Show "Pay Rates" and "For Office Use Only" and their subheadings in one row */
+.pay-rates-section, .office-use-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pay-rates-section, .office-use-section {
+    flex: 1 1 100%;
+}
+
+.pay-rates-section h5, .office-use-section h5 {
+    flex: 1 1 100%;
+    margin-bottom: 5px; /* Reduce margin */
+}
+/* Set a consistent size for all input fields */
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 12px); /* Ensure consistent width */
+    height: 30px; /* Ensure consistent height */
+    padding: 5px; /* Ensure consistent padding */
+    border: 1px solid #ccc; /* Standard border */
+    border-radius: 3px; /* Standard border radius */
+    font-size: 10px; /* Standard font size */
+    box-sizing: border-box; /* Include padding and border in width */
+    margin-bottom: 5px; /* Standard margin bottom */
+}

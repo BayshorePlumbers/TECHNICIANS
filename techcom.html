@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNICIAN POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="print.css" type="text/css" media="print">
+</head>
+<body>
+    <h1>TECHNICIAN POTENTIAL COMMISSION CALCULATOR - BAYSHORE PLUMBERS</h1>
+    <div class="logo-container">
+        <img src="BP.png" alt="BP" class="logo">
+    </div>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="row">
+                    <div class="column">
+                        <label for="tn">TECHNICIAN'S NAME:</label>
+                        <input type="text" id="tn" name="tn" placeholder="Enter the Technician's name here">
+                        <br><br>
+                        <label for="in">INVOICE NUMBER:</label>
+                        <input type="text" id="in" name="in" placeholder="Enter the invoice number here">
+                        <br><br>
+                        <label for="tp">TOTAL PRICE:</label>
+                        <input type="number" id="tp" name="tp" placeholder="Enter the final selling price of the job" min="0">
+                        <br><br>
+                        <label for="pd">PROJECT HOURS:</label>
+                        <input type="number" id="pd" name="pd" placeholder="Enter Final Project Duration" min="0">
+                    </div>
+                    <br><br>
+                    <div class="column">
+                        <label for="material">MATERIAL EXPENSES:</label>
+                        <input type="number" id="material" name="material" placeholder="Enter Estimated MATERIAL EXPENSES" min="0">
+                        <br><br>
+                        <label for="ja">JOB ADDRESS:</label>
+                        <input type="text" id="ja" name="ja" placeholder="Enter job address here">
+                        <br><br>
+                        <label for="pbtc">PRICE BOOK JOB CODE:</label>
+                        <input type="text" id="pbtc" name="pbtc" placeholder="Enter PRICE BOOK JOB CODE">
+                    </div>
+                </div>
+
+                <div class="row labor-details-row">
+                    <h5>LABOR DETAILS</h5>
+                    <div class="column">
+                        <label for="day1">DAY 1:</label>
+                        <input type="number" id="day1" name="day1" min="0">
+                        <br><br>
+                        <label for="day2">DAY 2:</label>
+                        <input type="number" id="day2" name="day2" min="0">
+                        <br><br>
+                        <label for="day3">DAY 3:</label>
+                        <input type="number" id="day3" name="day3" min="0">
+                        <br><br>
+                        <label for="day4">DAY 4:</label>
+                        <input type="number" id="day4" name="day4" min="0">
+                    </div>
+                    <br><br>
+                    <div class="column">
+                        <label for="day5">DAY 5:</label>
+                        <input type="number" id="day5" name="day5" min="0">
+                        <br><br>
+                        <label for="ah">Additional Hours:</label>
+                        <input type="number" id="ah" name="ah" min="0">
+                        <br><br>
+                        <label for="toh">Total Overtime Hours:</label>
+                        <input type="number" id="toh" name="toh" min="0">
+                        <br><br>
+                        <label for="totalHours">Total Hours:</label>
+                        <input type="number" id="totalHours" name="totalHours" readonly>
+                    </div>
+                </div>
+
+                <div class="row notes-section">
+                    <h5>NOTES:</h5>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Enter Notes Here"></textarea>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <h5 class="pay-rates-section">PAY RATES</h5>
+                            <div class="row">
+                                <div class="label-column">
+                                <label for="t1">TIER 1 (21%):</label>
+                                <input type="text" id="t1" name="t1" readonly>
+                            </div>
+                            <div class="input-column">
+                                <label for="t2">TIER 2 (15%):</label>
+                                <input type="text" id="t2" name="t2" readonly>
+                            </div>
+                            <div class="label-column">
+                                <label for="t3">TIER 3 (10%):</label>
+                                <input type="text" id="t3" name="t3" readonly>
+                            </div>
+                            <div class="input-column">
+                                <label for="t4">TIER 4 (JOB BUST):</label>
+                                <input type="text" id="t4" name="t4" readonly>
+                            </div>
+                    </div>
+                        <div class="row">
+                            <div class="column">
+                                <h5 class="office-use-section">FOR OFFICE USE ONLY</h5>
+                                <div class="row">
+                                    <div class="label-column">
+                                        <label for="sw">SW21:</label>
+                                        <input type="text" id="sw" name="sw" readonly>
+                                    </div>
+                                    <div class="input-column">
+                                        <label for="wh">WH32:</label>
+                                        <input type="text" id="wh" name="wh" readonly>
+                                    </div>
+                                    <div class="label-column">
+                                        <label for="rd">RD15/UL15:</label>
+                                        <input type="text" id="rd" name="rd" readonly>
+                                    </div>
+                                    <div class="input-column">
+                                        <label for="rp">RP21:</label>
+                                        <input type="text" id="rp" name="rp" readonly>
+                                    </div>
+                                    <div class="label-column">
+                                        <label for="ss">Z.SS:</label>
+                                        <input type="text" id="ss" name="ss" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="row button-container">
+                    <button type="button" id="calculateBtn">Calculate Potential Commission</button>
+                    <button type="button" id="printButton">Print</button>
+                    </div>
+                    <div class="output-group">
+                        <p>Technician Commission: <span id="finalPrice">0.00</span></p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="techcomscript.js"></script>
+</body>
+</html>

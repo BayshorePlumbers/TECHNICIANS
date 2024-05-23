@@ -1,0 +1,190 @@
+/* Add this CSS to style.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 10px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+}
+
+.calculator {
+    padding: 10px;
+    border: 2px solid #121111;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.label-column,
+.input-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    height: 25px; /* Set the height to 40px for consistency */
+    padding: 5px; /* Set padding to 10px for consistent spacing */
+    border-radius: 5px; /* Set border-radius to 5px for rounded corners */
+    border: 1px solid #ccc; /* Set border to a light color for all input fields */
+    margin-bottom: 5px; /* Add margin-bottom for spacing between input fields */
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: flex-end; /* Align checkboxes to the right */
+    margin-bottom: 5px; /* Add margin to the right for spacing */
+}
+
+.checkbox-container label {
+    margin-right: 5px;
+    font-size: 12px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 5px 10px; /* Standard padding for buttons */
+    font-size: 12px; /* Standard font size for buttons */
+    background-color: #ea8a6d;
+    color: #121111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 30px; /* Set height of buttons */
+    width: 140px; /* Set width of buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Ensure text is centered */
+}
+
+button:hover {
+    background-color: #c67358;
+}
+
+.output-group {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.output-group label,
+.output-group span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#finalPrice {
+    font-weight: bold;
+}
+
+.notes-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.notes-section textarea {
+    width: calc(100% - 20px);
+    height: 70px; /* Adjust height as needed */
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+h5 {
+    font-size: 14px; /* Reduced font size */
+    margin-bottom: 5px; /* Reduced margin */
+}
+.pay-rates-section,
+.office-use-section {
+    margin-bottom: 5px; /* Reduced margin */
+}
+/* Ensuring subheading and input fields are aligned properly */
+.pay-rates-section .label-column,
+.pay-rates-section .input-column,
+.office-use-section .label-column,
+.office-use-section .input-column {
+    flex: 1 1 45%;
+}
+
+.pay-rates-section h5,
+.office-use-section h5 {
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 12px);
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 10px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
